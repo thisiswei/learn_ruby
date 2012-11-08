@@ -13,10 +13,11 @@ class Fixnum
     num = self
 
     if num < 100 && num >=20
+      tys = ty_words[num/10]
       if num%10==0
-        real_word = ty_words[num/10]
+        real_word = tys
       else
-        real_word = ty_words[num/10]+" #{words[num%10]}"
+        real_word = tys +" #{words[num%10]}"
       end
     end
 
